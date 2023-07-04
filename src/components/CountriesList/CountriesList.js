@@ -27,8 +27,8 @@ const CountriesList = ({ url }) => {
 
 				{/* ira la estructira de info del país:bandera y nombre */}
 				{countries.map((country, i) => {
-					return (<div key={i} id="main">
-						<Link className='country' to={"/"} onClick={() => showInfo(country)}>
+					return (<div key={i} id="main" className='d-flex w-100 '>
+						<Link className='country ml- w-25 h-25 border border-black' to={"/"} onClick={() => showInfo(country)}>
 							{/* añadiri el onclickpara la funcion de carga de los detalles */}
 							<img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} alt="countryflag" />
 							<p>{country.name.common}</p>
